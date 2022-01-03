@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_holder_custom_ip_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/cardview_padding"
+    app:cardElevation="@dimen/cardview_elevation"
+    app:cardUseCompatPadding="true"
+    android:checkable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/view_holder_custom_ip_domain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/edittext_min_height"
+            android:layout_weight="1"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_custom_ip_divider"
+            tools:text="example.com" />
+
+        <View
+            android:id="@+id/view_holder_custom_ip_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/cardview_items_margin"
+            android:layout_marginEnd="@dimen/cardview_items_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_holder_custom_ip_domain"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_custom_ip_ip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="?android:attr/listDivider"/>
+
+        <TextView
+            android:id="@+id/view_holder_custom_ip_ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/edittext_min_height"
+            android:layout_weight="1"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_holder_custom_ip_divider"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_custom_ip_edit"
+            tools:text="8.8.8.8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_holder_custom_ip_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.AppCompat.Button"
+            style="@style/Widget.Material3.Button.IconButton"
+            app:icon="@drawable/ic_edit_24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_custom_ip_delete"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_holder_custom_ip_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.AppCompat.Button"
+            style="@style/Widget.Material3.Button.IconButton"
+            app:icon="@drawable/ic_delete_24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

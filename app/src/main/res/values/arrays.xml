@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="proxy_mode_titles">
+        <item name="http">@string/preference_proxy_mode_http_title</item>
+        <item name="transparent">@string/preference_proxy_mode_transparent_title</item>
+    </string-array>
+
+    <string-array name="proxy_mode_values">
+        <item name="http">http</item>
+        <item name="transparent">transparent</item>
+    </string-array>
+</resources>

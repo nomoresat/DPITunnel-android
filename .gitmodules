@@ -1,0 +1,3 @@
+[submodule "app/src/main/cpp/dpitunnel-cli"]
+	path = app/src/main/cpp/dpitunnel-cli
+	url = https://github.com/nomoresat/DPITunnel-cli

@@ -1,0 +1,11 @@
+DPI Tunnel is an app, that allows you to bypass censorship
+
+DPI Tunnel uses desync attacks to fool DPI filters
+
+It is NOT VPN and won't change your IP
+
+Features
+* Bypass many restrictions: blocked or throttled resources
+* Create profiles for different ISP and automatically change them when switch connection
+* Auto start program on device boot
+* Easily auto configure for your ISP

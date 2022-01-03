@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable-v31/ic_launcher_background.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable-v31/ic_launcher_background_round.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable-v31/ic_launcher_foreground.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable-v31/ic_launcher_foreground_monochrome.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable-v31/ic_selector_profiles_24dp.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_add_24dp.xml" value="0.197" />
+        <entry key="app/src/main/res/drawable/ic_add_black_24dp.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_check_all_24dp.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_check_circle_black_24dp.xml" value="0.234" />
+        <entry key="app/src/main/res/drawable/ic_check_circle_white_96dp.xml" value="0.227" />
+        <entry key="app/src/main/res/drawable/ic_delete_black_24dp.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_edit_24dp.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_edit_black_24dp.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_export_24dp.xml" value="0.197" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background_round.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.197" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground_monochrome.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_more_vert_24dp.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_more_vert_black_24dp.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_quick_tile.xml" value="0.1715" />
+        <entry key="app/src/main/res/drawable/ic_quick_tile_24dp.xml" value="0.197" />
+        <entry key="app/src/main/res/drawable/ic_save_24.xml" value="0.197" />
+        <entry key="app/src/main/res/drawable/ic_save_black_24dp.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_save_white_24dp.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_selector_dashboard_24dp.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_selector_profiles_24dp.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_stop_24.xml" value="0.197" />
+        <entry key="app/src/main/res/layout/activity_custom_ips.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_edit_profile_content.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3482789855072464" />
+        <entry key="app/src/main/res/layout/activity_proxified_apps.xml" value="0.27905982905982907" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.3482789855072464" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_profiles.xml" value="0.3482789855072464" />
+        <entry key="app/src/main/res/layout/view_holder_custom_ip_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/view_holder_profile_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/view_holder_profile_item_menu.xml" value="0.3482789855072464" />
+        <entry key="app/src/main/res/layout/view_holder_proxified_apps_item.xml" value="0.27905982905982907" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3546875" />
+        <entry key="app/src/main/res/menu/custom_ips_toolbar_menu.xml" value="0.29102564102564105" />
+        <entry key="app/src/main/res/menu/edit_profile_toolbar_menu.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/menu/profile_item_menu.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/menu/proxified_apps_toolbar_menu.xml" value="0.1252136752136752" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.16" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.164" />
+        <entry key="app/src/main/res/mipmap-anydpi-v31/ic_launcher.xml" value="0.164" />
+        <entry key="app/src/main/res/mipmap-anydpi-v31/ic_launcher_round.xml" value="0.14" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

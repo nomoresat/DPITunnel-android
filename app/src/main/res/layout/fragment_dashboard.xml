@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dashboard_status_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/cardview_elevation"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/cardview_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/dashboard_status_card_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_status_card"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dashboard_status_card_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_settings_24dp"
+                android:text="@string/button_settings"
+				android:autoSizeTextType="uniform"
+				android:autoSizeMinTextSize="8sp"
+				android:autoSizeMaxTextSize="14sp"
+				android:maxLines="1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+				tools:targetApi="o" />
+
+            <ImageView
+                android:id="@+id/dashboard_status_card_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardview_items_margin"
+                android:padding="@dimen/cardview_items_margin"
+                app:layout_constraintTop_toBottomOf="@id/dashboard_status_card_settings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/ic_check_circle_white_96dp"
+                tools:background="@color/green_300" />
+
+            <ProgressBar
+                android:id="@+id/dashboard_status_card_progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:indeterminate="true"
+                app:layout_constraintTop_toTopOf="@id/dashboard_status_card_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/dashboard_status_card_image" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dashboard_status_card_start_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.AppCompat.Button"
+                android:layout_margin="@dimen/cardview_items_margin"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                app:layout_constraintTop_toBottomOf="@id/dashboard_status_card_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dashboard_status_card_restart"
+                tools:text="@string/button_status_stop_text"
+				tools:autoSizeTextType="uniform"
+				tools:autoSizeMinTextSize="8sp"
+				tools:autoSizeMaxTextSize="14sp"
+				tools:maxLines="1"
+                tools:icon="@drawable/ic_stop_24" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dashboard_status_card_restart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.AppCompat.Button"
+                android:layout_margin="@dimen/cardview_items_margin"
+                android:text="@string/button_restart"
+				android:autoSizeTextType="uniform"
+				android:autoSizeMinTextSize="8sp"
+				android:autoSizeMaxTextSize="14sp"
+				android:maxLines="1"
+                app:icon="@drawable/ic_restart_24dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                app:layout_constraintTop_toBottomOf="@id/dashboard_status_card_image"
+                app:layout_constraintStart_toEndOf="@id/dashboard_status_card_start_stop"
+                app:layout_constraintEnd_toEndOf="parent"
+				tools:targetApi="o" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App/Activity names -->
+    <string name="app_name">DPI Tunnel</string>
+    <string name="title_profiles">Profiles</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_activity_edit_profile">Add profile</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_custom_ips">Custom IPs</string>
+    <string name="title_activity_proxified_apps">Proxified apps</string>
+
+    <!-- Tile -->
+    <string name="tile_enable_disable">DPI Tunnel</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Main activity messages -->
+    <string name="no_root_failed">Fail! This app requires root access to work!</string>
+
+    <!-- Dashboard fragment -->
+    <string name="title_status_card">Status</string>
+    <string name="button_settings">settings</string>
+    <string name="button_status_start_text">start</string>
+    <string name="button_status_stop_text">stop</string>
+    <string name="button_restart">restart</string>
+    <!-- Dashboard fragment messages -->
+    <string name="no_one_profile_failed">Fail! Create at least one profile</string>
+    <!-- Dashboard fragment messages -->
+    <string name="empty_profile_name_failed">Fail! Blank profile ID</string>
+
+    <!-- Profiles fragment -->
+    <string name="unnamed_profile_name">Unnamed</string>
+    <string name="default_profile_mark"> (Default)</string>
+    <string name="profile_item_menu_rename">Rename</string>
+    <string name="profile_item_menu_delete">Delete</string>
+    <string name="profile_item_menu_default">Default</string>
+    <string name="profile_item_menu_enabled">Use</string>
+    <string name="dialog_profile_rename_positive">OK</string>
+    <string name="dialog_profile_rename_negative">Cancel</string>
+    <string name="dialog_profile_rename_title">Rename profile</string>
+
+    <!-- Edit profile activity -->
+    <!-- Toolbar -->
+    <string name="rename_edit_profile_toolbar">Rename</string>
+    <!-- Profile id card -->
+    <string name="title_profile_id_card">Profile ID</string>
+    <string name="desc_default_profile_id_card">Default profile</string>
+    <string name="desc_profile_id_card">Net iface/Wi-Fi AP</string>
+    <string name="hint_profile_id_card">&lt;net_iface&gt;[:&lt;wifi_net&gt;]|default</string>
+    <string name="button_profile_id_card">Set from current network settings</string>
+    <!-- Desync attacks card -->
+    <string name="title_desync_attacks_card">Desync attacks</string>
+    <string name="desc_zero_level_desync_attacks_card">Zero attack</string>
+    <string-array name="zero_attacks">
+        <item>None</item>
+        <item>Fake</item>
+        <item>RST</item>
+        <item>RST,ACK</item>
+    </string-array>
+    <string name="desc_first_level_desync_attacks_card">First attack</string>
+    <string-array name="first_attacks">
+        <item>None</item>
+        <item>Disorder</item>
+        <item>Disorder + fakes</item>
+        <item>Split</item>
+        <item>Split + fakes</item>
+    </string-array>
+    <string name="desc_wrong_seq_desync_attacks_card">Wrong SEQ for fakes</string>
+    <string name="desc_auto_ttl_desync_attacks_card">Auto TTL value</string>
+    <string name="desc_ttl_desync_attacks_card">TTL for fakes</string>
+    <string name="hint_ttl_desync_attacks_card">1 – 255</string>
+    <string name="desc_window_size_desync_attacks_card">TCP window size</string>
+    <string name="hint_window_size_desync_attacks_card">1 – 65535</string>
+    <string name="desc_window_scale_factor_desync_attacks_card">TCP window scale factor</string>
+    <string name="hint_window_scale_factor_desync_attacks_card">0 – 14</string>
+    <string name="desc_split_position_desync_attacks_card">Client packets split position</string>
+    <string name="hint_split_position_desync_attacks_card">1 – 65535</string>
+    <string name="desc_split_at_sni_desync_attacks_card">Split ClientHello at middle of SNI</string>
+    <string name="desc_show_log_autoconfig">Show log</string>
+    <string name="button_autoconfig_desync_attacks_card">Set automatically</string>
+    <!-- DNS card -->
+    <string name="title_dns_card">DNS</string>
+    <string name="desc_use_doh_dns_card">DNS-over-HTTPS</string>
+    <string name="desc_doh_server_dns_card">DoH server</string>
+    <string name="hint_doh_server_dns_card">https://dns.google/dns-query</string>
+    <string name="desc_dns_server_dns_card">DNS server</string>
+    <string name="hint_dns_server_dns_card">8.8.8.8</string>
+    <!-- Autoconfigure dialog -->
+    <string name="title_autoconfigure_edit_profile_dialog">Enter website domain you want to access</string>
+    <string name="hint_autoconfigure_edit_profile_dialog">google.com or https://google.com</string>
+    <string name="positive_autoconfigure_edit_profile_dialog">OK</string>
+    <string name="negative_autoconfigure_edit_profile_dialog">Cancel</string>
+    <!-- Exit confirmation dialog -->
+    <string name="title_confirmation_edit_profile_dialog">You have unsaved changes</string>
+    <string name="message_confirmation_edit_profile_dialog">Save changes?</string>
+    <string name="save_confirmation_edit_profile_dialog">Save</string>
+    <string name="discard_confirmation_edit_profile_dialog">Discard</string>
+    <string name="cancel_confirmation_edit_profile_dialog">Cancel</string>
+    <!-- Edit profile activity messages -->
+    <string name="location_permission_failed">Fail! Grant location permission to get network settings</string>
+    <string name="location_disabled_failed">Fail! Enable location to get network settings</string>
+    <string name="invalid_profile_id_failed">Fail! Profile id can\'t be empty or \'default\'</string>
+    <string name="no_working_attacks_found">Fail! No working attack found</string>
+    <string name="resolve_domain_failed">Fail! Resolve domain failed. Is website address correct?</string>
+    <string name="calculate_hops_failed">Fail! Failed to measure hops. Try again</string>
+    <string name="config_parse_failed">Fail! Failed to parse output of binary. Contact developer</string>
+    <string name="profile_successfully_configured">Success! Profile configured</string>
+
+    <!-- Proxified apps activity -->
+    <!-- Toolbar -->
+    <string name="save_proxified_apps_toolbar">Save</string>
+    <!-- Exit confirmation dialog -->
+    <string name="title_confirmation_proxified_apps_dialog">You have unsaved changes</string>
+    <string name="message_confirmation_proxified_apps_dialog">Save changes?</string>
+    <string name="save_confirmation_proxified_apps_dialog">Save</string>
+    <string name="discard_confirmation_proxified_apps_dialog">Discard</string>
+    <string name="cancel_confirmation_proxified_apps_dialog">Cancel</string>
+
+    <!-- Custom IPs activity -->
+    <!-- Toolbar -->
+    <string name="save_custom_ips_toolbar">Save</string>
+    <string name="import_custom_ips_toolbar">Import</string>
+    <!-- Dialogs -->
+    <string name="dialog_custom_ip_edit_domain_positive">OK</string>
+    <string name="dialog_custom_ip_edit_domain_negative">Cancel</string>
+    <string name="dialog_custom_ip_edit_domain_title">Domain</string>
+    <string name="dialog_custom_ip_edit_domain_invalid_domain">Invalid domain</string>
+    <string name="dialog_custom_ip_edit_ip_positive">OK</string>
+    <string name="dialog_custom_ip_edit_ip_negative">Cancel</string>
+    <string name="dialog_custom_ip_edit_ip_title">IP</string>
+    <string name="dialog_custom_ip_edit_ip_invalid_ip">Invalid IP</string>
+    <!-- Exit confirmation dialog -->
+    <string name="title_confirmation_custom_ips_dialog">You have unsaved changes</string>
+    <string name="message_confirmation_custom_ips_dialog">Save changes?</string>
+    <string name="save_confirmation_custom_ips_dialog">Save</string>
+    <string name="discard_confirmation_custom_ips_dialog">Discard</string>
+    <string name="cancel_confirmation_custom_ips_dialog">Cancel</string>
+
+    <!-- Preferences -->
+    <!-- General -->
+    <string name="preference_category_general">General</string>
+    <string name="preference_start_on_boot_title">Start service on boot</string>
+    <string name="preference_start_on_boot_summary">Start DPI Tunnel after device boot</string>
+    <string name="preference_custom_ca_bundle_title">Use custom CA Bundle</string>
+    <string name="preference_custom_ca_bundle_summary">Custom CA Bundle for validating SSL certs</string>
+    <string name="preference_ca_bundle_path_title">Import CA Bundle</string>
+    <!-- Proxy -->
+    <string name="preference_category_server">Proxy</string>
+    <string name="preference_proxy_mode_title">Proxy mode</string>
+    <string name="preference_proxy_mode_summary">HTTP mode works mainly for browser. Transparent for all apps using HTTP/HTTPS</string>
+    <string name="preference_proxy_mode_http_title">HTTP</string>
+    <string name="preference_proxy_mode_transparent_title">Transparent</string>
+    <string name="preference_proxified_apps_title">Proxified apps</string>
+    <string name="preference_proxified_apps_summary">Apps, which traffic will be processed by DPITunnel. Only transparent mode supported</string>
+    <string name="preference_proxy_system_wide_title">System wide proxy</string>
+    <string name="preference_proxy_system_wide_summary">DPITunnel proxy for all system. Disable if you want to make proxy chains</string>
+    <string name="preference_proxy_ip_title">Proxy IP</string>
+    <string name="preference_proxy_ip_summary">IP to bind proxy. Ex. 127.0.0.1</string>
+    <string name="preference_proxy_port_title">Proxy port</string>
+    <string name="preference_proxy_port_summary">Port to bind proxy. Ex. 8080</string>
+    <string name="preference_proxy_ip_invalid_ip">Invalid IP</string>
+    <!-- DNS -->
+    <string name="preference_category_dns">DNS</string>
+    <string name="preference_dns_custom_ips_title">Custom IPs</string>
+    <string name="preference_dns_custom_ips_summary">Allows to set custom IPs for specific domains, ignoring DNS/DoH response. Useful for censored huge sites</string>
+</resources>

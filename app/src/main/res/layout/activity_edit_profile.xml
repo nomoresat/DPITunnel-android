@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.editProfile.EditProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/edit_profile_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/edit_profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            style="?toolbarStyle"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_profile_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_save_24"
+        android:layout_margin="@dimen/fab_margin" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Profile id card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/edit_profile_profile_id_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/cardview_elevation"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="@dimen/cardview_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/edit_profile_profile_id_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_profile_id_card"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/edit_profile_profile_id_default_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_default_profile_id_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_profile_id_default"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_profile_id_default"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_profile_id_default"/>
+                    <CheckBox
+                        android:id="@+id/edit_profile_profile_id_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_profile_id_title"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_profile_id_default_desc"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_profile_id_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_profile_id_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_profile_id_edit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_profile_id_edit"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_profile_id_edit"/>
+                    <EditText
+                        android:id="@+id/edit_profile_profile_id_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_profile_id_card"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_profile_id_default_desc"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_profile_id_desc"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/edit_profile_profile_id_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_profile_id_card"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_profile_id_edit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!-- Desync attacks card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/edit_profile_desync_attacks_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/cardview_elevation"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="@dimen/cardview_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_profile_profile_id_card">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_desync_attacks_card"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_zero_level_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_zero_level_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_zero_level"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_zero_level"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_zero_level" />
+                    <Spinner
+                        android:id="@+id/edit_profile_desync_attacks_zero_level"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:minHeight="@dimen/spinner_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_zero_level_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_title"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_first_level_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_first_level_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_first_level"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_first_level"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_first_level" />
+                    <Spinner
+                        android:id="@+id/edit_profile_desync_attacks_first_level"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:minHeight="@dimen/spinner_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_first_level_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_zero_level"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_wrong_seq_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_wrong_seq_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_wrong_seq"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_wrong_seq"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_wrong_seq" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/edit_profile_desync_attacks_wrong_seq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_wrong_seq_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_first_level" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_auto_ttl_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_auto_ttl_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_auto_ttl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_auto_ttl"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_auto_ttl" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/edit_profile_desync_attacks_auto_ttl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_auto_ttl_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_wrong_seq" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_ttl_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_ttl_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_ttl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_ttl"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_ttl" />
+                    <EditText
+                        android:id="@+id/edit_profile_desync_attacks_ttl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_ttl_desync_attacks_card"
+                        android:inputType="number"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_ttl_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_auto_ttl" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_window_size_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_window_size_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_window_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_window_size"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_window_size" />
+                    <EditText
+                        android:id="@+id/edit_profile_desync_attacks_window_size"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_window_size_desync_attacks_card"
+                        android:inputType="number"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_window_size_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_ttl" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_window_scale_factor_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_window_scale_factor_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_window_scale_factor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_window_scale_factor"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_window_scale_factor" />
+                    <EditText
+                        android:id="@+id/edit_profile_desync_attacks_window_scale_factor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_window_scale_factor_desync_attacks_card"
+                        android:inputType="number"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_window_scale_factor_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_window_size" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_split_position_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_split_position_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_split_position"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_split_position"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_split_position" />
+                    <EditText
+                        android:id="@+id/edit_profile_desync_attacks_split_position"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_split_position_desync_attacks_card"
+                        android:inputType="number"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_split_position_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_window_scale_factor" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_desync_attacks_split_at_sni_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_split_at_sni_desync_attacks_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_desync_attacks_split_at_sni"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_desync_attacks_split_at_sni"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_desync_attacks_split_at_sni" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/edit_profile_desync_attacks_split_at_sni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_desync_attacks_split_at_sni_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_split_position" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/edit_profile_desync_attacks_autoconfig_show_log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_show_log_autoconfig"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_split_at_sni" />
+
+                    <ProgressBar
+                        android:id="@+id/edit_profile_desync_attacks_autoconfig_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_autoconfig_show_log"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/edit_profile_desync_attacks_autoconfig_terminal_scroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        app:layout_constraintHeight_max="@dimen/terminal_max_height"
+                        app:layout_constrainedHeight="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_autoconfig_progress">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/edit_profile_desync_attacks_autoconfig_terminal_output"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="Here is terminal output"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                    <Button
+                        android:id="@+id/edit_profile_desync_attacks_autoconfig_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_autoconfig_desync_attacks_card"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_autoconfig_terminal_scroll"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!-- DNS card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/edit_profile_dns_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/cardview_elevation"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="@dimen/cardview_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_profile_desync_attacks_card">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/edit_profile_dns_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_dns_card"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/edit_profile_dns_use_doh_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_use_doh_dns_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_dns_use_doh"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_dns_use_doh"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_dns_use_doh" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/edit_profile_dns_use_doh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_dns_use_doh_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_dns_title" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_dns_doh_server_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_doh_server_dns_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_dns_doh_server"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_dns_doh_server"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_dns_doh_server" />
+                    <EditText
+                        android:id="@+id/edit_profile_dns_doh_server"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_doh_server_dns_card"
+                        android:inputType="textNoSuggestions|textMultiLine|textUri"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_dns_doh_server_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_dns_use_doh" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_dns_dns_server_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_dns_server_dns_card"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@id/edit_profile_dns_dns_server"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/edit_profile_dns_dns_server"
+                        app:layout_constraintBottom_toBottomOf="@id/edit_profile_dns_dns_server" />
+                    <EditText
+                        android:id="@+id/edit_profile_dns_dns_server"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_items_margin"
+                        android:hint="@string/hint_dns_server_dns_card"
+                        android:inputType="textNoSuggestions|textMultiLine|textUri"
+                        android:minHeight="@dimen/edittext_min_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edit_profile_dns_dns_server_desc"
+                        app:layout_constraintTop_toBottomOf="@id/edit_profile_dns_doh_server" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

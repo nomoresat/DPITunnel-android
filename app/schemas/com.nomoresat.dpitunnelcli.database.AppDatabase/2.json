@@ -1,0 +1,148 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "fda85eb59bb50aa5a199ab95ddd0f532",
+    "entities": [
+      {
+        "tableName": "profiles_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `enabled` INTEGER NOT NULL, `name` TEXT NOT NULL, `title` TEXT, `buffer_size` INTEGER, `split_position` INTEGER, `split_at_sni` INTEGER NOT NULL, `wrong_seq` INTEGER NOT NULL, `auto_ttl` INTEGER NOT NULL, `fake_packets_ttl` INTEGER, `window_size` INTEGER, `window_scale_factor` INTEGER, `inbuilt_dns` INTEGER NOT NULL, `inbuilt_dns_ip` TEXT, `inbuilt_dns_port` INTEGER, `doh` INTEGER NOT NULL, `doh_server` TEXT, `desync_attacks` INTEGER NOT NULL, `desync_zero_attack` TEXT, `desync_first_attack` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "enabled",
+            "columnName": "enabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bufferSize",
+            "columnName": "buffer_size",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "splitPosition",
+            "columnName": "split_position",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "splitAtSni",
+            "columnName": "split_at_sni",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wrongSeq",
+            "columnName": "wrong_seq",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "autoTtl",
+            "columnName": "auto_ttl",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fakePacketsTtl",
+            "columnName": "fake_packets_ttl",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "windowSize",
+            "columnName": "window_size",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "windowScaleFactor",
+            "columnName": "window_scale_factor",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inBuiltDNS",
+            "columnName": "inbuilt_dns",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inBuiltDNSIP",
+            "columnName": "inbuilt_dns_ip",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inBuiltDNSPort",
+            "columnName": "inbuilt_dns_port",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "doh",
+            "columnName": "doh",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dohServer",
+            "columnName": "doh_server",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "desyncAttacks",
+            "columnName": "desync_attacks",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desyncZeroAttack",
+            "columnName": "desync_zero_attack",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "desyncFirstAttack",
+            "columnName": "desync_first_attack",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fda85eb59bb50aa5a199ab95ddd0f532')"
+    ]
+  }
+}

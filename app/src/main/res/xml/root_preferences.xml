@@ -1,0 +1,77 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/preference_category_general">
+
+        <SwitchPreferenceCompat
+            app:key="preference_start_on_boot"
+            app:defaultValue="false"
+			app:singleLineTitle="false"
+            app:title="@string/preference_start_on_boot_title"
+            app:summary="@string/preference_start_on_boot_summary" />
+
+        <SwitchPreferenceCompat
+            app:key="preference_custom_ca_bundle"
+            app:defaultValue="false"
+			app:singleLineTitle="false"
+            app:title="@string/preference_custom_ca_bundle_title"
+            app:summary="@string/preference_custom_ca_bundle_summary" />
+
+        <Preference
+            app:key="preference_ca_bundle_path"
+            app:dependency="preference_custom_ca_bundle"
+			app:singleLineTitle="false"
+            app:title="@string/preference_ca_bundle_path_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/preference_category_server">
+
+        <ListPreference
+            app:key="preference_proxy_mode"
+            app:defaultValue="http"
+            app:entries="@array/proxy_mode_titles"
+            app:entryValues="@array/proxy_mode_values"
+            app:singleLineTitle="false"
+            app:title="@string/preference_proxy_mode_title"
+            app:summary="@string/preference_proxy_mode_summary" />
+
+        <Preference
+            app:key="preference_proxified_apps"
+            app:singleLineTitle="false"
+            app:title="@string/preference_proxified_apps_title"
+            app:summary="@string/preference_proxified_apps_summary" />
+
+        <SwitchPreferenceCompat
+            app:key="preference_proxy_system_wide"
+            app:defaultValue="true"
+            app:singleLineTitle="false"
+            app:title="@string/preference_proxy_system_wide_title"
+            app:summary="@string/preference_proxy_system_wide_summary" />
+
+        <EditTextPreference
+            app:key="preference_proxy_ip"
+            app:defaultValue="127.0.0.1"
+			app:singleLineTitle="false"
+            app:title="@string/preference_proxy_ip_title"
+            app:summary="@string/preference_proxy_ip_summary" />
+
+        <EditTextPreference
+            app:key="preference_proxy_port"
+            app:defaultValue="8080"
+			app:singleLineTitle="false"
+            app:title="@string/preference_proxy_port_title"
+            app:summary="@string/preference_proxy_port_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/preference_category_dns">
+
+        <Preference
+            app:key="preference_dns_custom_ips"
+            app:singleLineTitle="false"
+            app:title="@string/preference_dns_custom_ips_title"
+            app:summary="@string/preference_dns_custom_ips_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
